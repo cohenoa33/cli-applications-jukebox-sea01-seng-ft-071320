@@ -57,7 +57,16 @@ end
 
 def run 
   puts "Please enter a command:"
-   user_response = gets.strip.to_s
+   command = gets.strip.to_s
    
-   
+   case command
+    when 'exit'
+      exit_jukebox
+    when 'play'
+       play(songs)
+    when 'list'
+       list(songs)
+    when 'help'
+      help
+    end  
 end
