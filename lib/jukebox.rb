@@ -69,7 +69,7 @@ def run(songs)
     when 'help'
       help
     end  
-  break
+    break
   end 
     
 end
