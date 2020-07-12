@@ -39,11 +39,11 @@ end
 
 def play(songs)
   puts "Please enter a song name or number:"
-  user_response = gets.strip.to_s
+  user_response = gets
 
-    if (1...9).to_s.include?(user_response)
+    if (1...9).include?(user_response).to_i
      puts "Playing #{song[user_response.to_i -1]}"
-    elsif songs.include?(user_response)
+    elsif songs.include?(user_response).strip.to_s
      puts "Playing #{(user_response)}"
     else
      puts "Invalid input, please try again"
