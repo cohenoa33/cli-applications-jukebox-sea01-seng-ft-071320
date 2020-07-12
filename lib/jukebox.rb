@@ -57,7 +57,7 @@ end
 
 def run 
   puts "Please enter a command:"
-   command = gets.strip.to_s
+  command = gets.strip
    
    case command
     when 'exit'
