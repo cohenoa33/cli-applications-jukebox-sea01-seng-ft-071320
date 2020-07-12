@@ -21,9 +21,35 @@ songs = [
 #puts say_hello(users_name)
 
 def help 
-  put "I accept the following commands:
-  - help : displays this help message
-  - list : displays a list of songs you can play
-  - play : lets you choose a song to play
-  - exit : exits this program"
+  puts "I accept the following commands:"
+  puts " - help : displays this help message"
+  puts " - list : displays a list of songs you can play"
+  puts " - play : lets you choose a song to play"
+  puts " - exit : exits this program"
 end
+
+def list(songs)
+  i = 0
+  while i< songs.length do 
+    songs.each_with_index  
+    puts " #{i+1}. #{songs[i]}"
+    i += 1
+  end
+end
+
+def play(songs)
+  puts "Please enter a song name or number:"
+  user_response = gets.strip.to_s
+
+    songs.include? (user_response)
+    if true
+     puts "Playing #{song}"
+    else
+    puts "Invalid input, please try again"
+   end
+
+  
+end
+
+
+  
